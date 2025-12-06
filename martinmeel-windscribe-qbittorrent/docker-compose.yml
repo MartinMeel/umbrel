@@ -5,7 +5,7 @@ services:
   app_proxy:
     environment:
       # Container name pattern: <app-id>_<service-name>_1
-      APP_HOST: windy-transmission-vpn_gluetun_1
+      APP_HOST: martinmeel-windscribe-qbittorrent_1
       APP_PORT: 9091
 
   gluetun:
@@ -25,8 +25,8 @@ services:
       - OPENVPN_PASSWORD=
 
       # Optional Windscribe location filters:
-      # - SERVER_REGIONS=Netherlands
-      # - SERVER_CITIES=Amsterdam
+      - SERVER_REGIONS=Netherlands
+      - SERVER_CITIES=Amsterdam
 
       # Timezone
       - TZ=Europe/Amsterdam
