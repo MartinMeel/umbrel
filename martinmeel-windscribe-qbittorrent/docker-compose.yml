@@ -14,7 +14,7 @@ services:
     cap_add:
       - NET_ADMIN
     devices:
-      - /dev/net/tun
+      - /dev/net/tun:/dev/net/tun
     environment:
       # ===== WINDCRIBE VPN SETTINGS =====
       - VPN_SERVICE_PROVIDER=windscribe
@@ -32,7 +32,7 @@ services:
       - TZ=Europe/Amsterdam
 
     volumes:
-      - ${APP_DATA_DIR}/gluetun:/gluetun
+      - ${APP_DATA_DIR}/data:/gluetun
 
   transmission:
     image: lscr.io/linuxserver/transmission:latest
@@ -44,8 +44,8 @@ services:
       - gluetun
 
     environment:
-      - PUID=1000
-      - PGID=1000
+    #  - PUID=1000
+    #  - PGID=1000
       - TZ=Europe/Amsterdam
 
       # Use a fixed username and Umbrel-provided unique password
