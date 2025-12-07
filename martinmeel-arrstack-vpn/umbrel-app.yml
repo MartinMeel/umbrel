@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: media-vpn-stack
+category: media
+name: Media VPN Stack
+version: "1.0.0"
+tagline: Sonarr/Radarr/Prowlarr/SABnzbd/qBittorrent over Gluetun
+description: >-
+  A full media stack (Sonarr, Radarr, Prowlarr, SABnzbd and qBittorrent)
+  routed entirely over a Windscribe-backed VPN using Gluetun. All apps
+  share a common downloads folder and only start once the VPN tunnel
+  is healthy.
+releaseNotes: ""
+developer: "Your Name"
+website: "https://github.com/qdm12/gluetun"
+repo: "https://github.com/qdm12/gluetun"
+support: "https://github.com/qdm12/gluetun/discussions"
+port: 8081   # qBittorrent Web UI via app_proxy
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: "Your Name"
+submission: ""

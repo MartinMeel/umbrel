@@ -1,0 +1,129 @@
+version: "3.7"
+
+services:
+  # Umbrel’s reverse proxy helper
+  app_proxy:
+    environment:
+      # IMPORTANT: this is the Docker container name of the service
+      # whose network we want to reach the Web UI on.
+      #
+      # Here we point to gluetun, because all the UIs are bound to the
+      # gluetun network namespace via network_mode: service:gluetun.
+      APP_HOST: media-vpn-stack_gluetun_1
+      # Main Web UI for the app: qBittorrent on 8081
+      APP_PORT: 8081
+      # If you want to allow direct unauth’d access (usually no):
+      # PROXY_AUTH_ADD: "false"
+
+  # --- Gluetun VPN gateway ---
+  gluetun:
+    image: qmcgaw/gluetun:latest
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - VPN_SERVICE_PROVIDER=windscribe
+      - VPN_TYPE=openvpn
+      - OPENVPN_USER=${WINDSCRIBE_USER}
+      - OPENVPN_PASSWORD=${WINDSCRIBE_PASSWORD}
+      # e.g. Netherlands, Germany, etc
+      - SERVER_REGIONS=${WINDSCRIBE_REGION:-Netherlands}
+      - TZ=${TZ:-Europe/Amsterdam}
+    volumes:
+      - ${APP_DATA_DIR}/data/gluetun:/gluetun
+    # If you also want LAN access to UIs, you can expose ports here.
+    # Umbrel users normally go via app_proxy so this is optional:
+    # ports:
+    #   - "8989:8989"   # Sonarr
+    #   - "7878:7878"   # Radarr
+    #   - "9696:9696"   # Prowlarr
+    #   - "8080:8080"   # SABnzbd
+    #   - "8081:8081"   # qBittorrent Web UI
+    healthcheck:
+      # Gluetun has a built-in healthcheck HTTP endpoint on 127.0.0.1:9999 
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:9999 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+  # --- qBittorrent (main UI for Umbrel app) ---
+  # This must be called `server` for Umbrel.
+  server:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    network_mode: "service:gluetun"
+    depends_on:
+      gluetun:
+        condition: service_healthy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-Europe/Amsterdam}
+      - WEBUI_PORT=8081
+    volumes:
+      - ${APP_DATA_DIR}/data/qbittorrent/config:/config
+      - ${APP_DATA_DIR}/data/downloads:/downloads
+    restart: unless-stopped
+
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    network_mode: "service:gluetun"
+    depends_on:
+      gluetun:
+        condition: service_healthy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-Europe/Amsterdam}
+    volumes:
+      - ${APP_DATA_DIR}/data/sonarr/config:/config
+      - ${APP_DATA_DIR}/data/downloads:/downloads
+      - ${APP_DATA_DIR}/data/media/tv:/tv
+    restart: unless-stopped
+
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    network_mode: "service:gluetun"
+    depends_on:
+      gluetun:
+        condition: service_healthy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-Europe/Amsterdam}
+    volumes:
+      - ${APP_DATA_DIR}/data/radarr/config:/config
+      - ${APP_DATA_DIR}/data/downloads:/downloads
+      - ${APP_DATA_DIR}/data/media/movies:/movies
+    restart: unless-stopped
+
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    network_mode: "service:gluetun"
+    depends_on:
+      gluetun:
+        condition: service_healthy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-Europe/Amsterdam}
+    volumes:
+      - ${APP_DATA_DIR}/data/prowlarr/config:/config
+    restart: unless-stopped
+
+  sabnzbd:
+    image: lscr.io/linuxserver/sabnzbd:latest
+    network_mode: "service:gluetun"
+    depends_on:
+      gluetun:
+        condition: service_healthy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-Europe/Amsterdam}
+    volumes:
+      - ${APP_DATA_DIR}/data/sabnzbd/config:/config
+      - ${APP_DATA_DIR}/data/downloads:/downloads
+    restart: unless-stopped
