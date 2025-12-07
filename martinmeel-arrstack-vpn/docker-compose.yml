@@ -9,7 +9,7 @@ services:
       #
       # Here we point to gluetun, because all the UIs are bound to the
       # gluetun network namespace via network_mode: service:gluetun.
-      APP_HOST: martinmeel-vpn-stack_gluetun_1
+      APP_HOST: martinmeel-arrstack-vpn_1
       # Main Web UI for the app: qBittorrent on 8081
       APP_PORT: 8081
       # If you want to allow direct unauth’d access (usually no):
