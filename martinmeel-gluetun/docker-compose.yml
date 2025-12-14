@@ -1,6 +1,6 @@
 services:
-  app_proxy:
-    environment:
+  #app_proxy:
+  #  environment:
       #PROXY_AUTH_ADD: false
       #APP_HOST: martinmeel-gluetun_server_1
       #APP_PORT: 8888
