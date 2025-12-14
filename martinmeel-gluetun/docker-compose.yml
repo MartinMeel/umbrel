@@ -49,7 +49,7 @@ services:
       # SHADOWSOCKS: "off"
       
       # Timezone
-      - TZ: ${TZ:-Europe/Amsterdam}
+      - TZ:=Europe/Amsterdam
       
       # Health check URL
       #HEALTH_VPN_DURATION_INITIAL: 60s
