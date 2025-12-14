@@ -44,7 +44,7 @@ description: >-
 
   API Examples:
   
-  - Check VPN status: curl http://umbrel.local:8888/v1/openvpn/status
+  - Check VPN status: curl http://umbrel.local:8000/v1/wireguard/status
   
   - Get public IP: curl http://umbrel.local:8000/v1/publicip/ip
 
