@@ -29,7 +29,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/gluetun
     environment:
-      # Windscribe VPN Configuration
+      # ProtonVPN VPN Configuration
       - VPN_SERVICE_PROVIDER=protonvpn
       - VPN_TYPE=wireguard
       - WIREGUARD_PRIVATE_KEY=${PROTON_PRIVATE_KEY}
