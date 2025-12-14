@@ -37,8 +37,8 @@ services:
       - WIREGUARD_PRIVATE_KEY=${PROTONVPN_PRIVATE_KEY}
       - SERVER_REGIONS=Netherlands         
       # Control server
-      - HTTPPROXY: on
-      - HTTPPROXY_LISTENING_ADDRESS: :8888
+      - HTTPPROXY=on
+      - HTTPPROXY_LISTENING_ADDRESS=:8888
       # Timezone
       - TZ=Europe/Amsterdam
       
