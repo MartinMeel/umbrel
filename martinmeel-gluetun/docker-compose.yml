@@ -35,19 +35,10 @@ services:
       - VPN_SERVICE_PROVIDER=protonvpn
       - VPN_TYPE=wireguard
       - WIREGUARD_PRIVATE_KEY=${PROTONVPN_PRIVATE_KEY}
-      - SERVER_REGIONS=Netherlands
-      #- SERVER_CITIES=Amsterdam
-      # Firewall settings
-      # FIREWALL_OUTBOUND_SUBNETS: ${NETWORK_SUBNET:-10.21.0.0/16}
-      
-      # DNS settings
-      # DOT: "on"
-      
+      - SERVER_REGIONS=Netherlands         
       # Control server
       - HTTPPROXY: "on"
       - HTTPPROXY_LISTENING_ADDRESS: ":8888"
-      # SHADOWSOCKS: "off"
-      
       # Timezone
       - TZ:=Europe/Amsterdam
       
