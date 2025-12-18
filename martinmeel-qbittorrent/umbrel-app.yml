@@ -1,0 +1,15 @@
+manifestVersion: 1
+id: qbittorrent
+name: qBittorrent
+tagline: Free and reliable P2P BitTorrent client
+icon: https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/src/icons/qbittorrent-tray.svg
+category: Media
+version: "4.6.0"
+port: 8090
+description: qBittorrent is a cross-platform free and open-source BitTorrent client
+developer: qBittorrent
+website: https://www.qbittorrent.org
+dependencies: []
+path: ""
+defaultUsername: "admin"
+defaultPassword: "adminpass"
