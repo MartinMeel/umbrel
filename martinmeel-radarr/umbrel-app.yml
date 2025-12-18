@@ -27,3 +27,4 @@ releaseNotes: >-
   Radarr configured to route through Gluetun VPN container
 submitter: Martin Meel
 submission: https://github.com/getumbrel/umbrel-apps
+torOnly: false
