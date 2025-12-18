@@ -12,7 +12,8 @@ description: >-
 
   qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.
 
-  ⚠️ This version needs a Gluetun container where the ports are difined for qBittorrent to work
+  ⚠️ This version needs a Gluetun container where the ports are defined for qBittorrent to work
+  ⚠️ To find the password just push the troubleshoot buttun and search for the password in the first lines.
 
 icon: https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/src/icons/qbittorrent-tray.svg
 developer: qBittorrent
@@ -27,7 +28,7 @@ gallery:
   - 3.jpg
 path: ""
 defaultUsername: "admin"
-defaultPassword: "adminpass"
+defaultPassword: ""
 torOnly: false
 releaseNotes: >-
   This release includes several bug fixes and improvements for better performance and stability.
