@@ -2,7 +2,7 @@ manifestVersion: 1
 id: martinmeel-qbittorrent
 category: networking
 name: qBittorrent
-version: "4.6.0"
+version: "5.1.4"
 tagline: Free and reliable P2P BitTorrent client
 description: >-
   qBittorrent is a cross-platform free and open-source BitTorrent client
