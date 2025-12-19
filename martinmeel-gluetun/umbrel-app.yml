@@ -39,7 +39,7 @@ description: >-
     
     
     API Examples:
-    `Get your VPN IP address`
+      `Get your VPN IP address`
     - curl http://umbrel.local:8000/v1/publicip/ip
   
     `WireGuard status`
