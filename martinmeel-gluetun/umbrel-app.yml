@@ -7,33 +7,35 @@ tagline: Lightweight VPN client with support for multiple providers
 icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-gluetun/gluetun.svg
 description: >-
   Gluetun is a lightweight VPN client written in Go that supports multiple VPN providers
-  including Windscribe. It acts as a VPN gateway for other Docker containers, allowing
+  including ProtonVPN, Windscribe etc. It acts as a VPN gateway for other Docker containers, allowing
   them to route their traffic through the VPN connection.
+  
 
-  This setup is pre-configured for Windscribe but supports many other providers. Other
+  This setup is pre-configured for ProtonVPN Wireguard but supports many other providers. Other
   containers can route their traffic through Gluetun by using its network stack.
+  
 
   Key features:
-  - Support for multiple VPN providers (Windscribe, NordVPN, ExpressVPN, etc.)
-  - Built-in firewall with kill switch
-  - DNS over TLS (DoT) support
-  - HTTP proxy server
-  - Health monitoring and automatic reconnection
-  - Port forwarding support (provider dependent)
+    - Support for multiple VPN providers (Windscribe, NordVPN, ExpressVPN, etc.)
+    - Built-in firewall with kill switch
+    - DNS over TLS (DoT) support
+    - HTTP proxy server
+    - Health monitoring and automatic reconnection
+    - Port forwarding support (provider dependent)
   
-  IMPORTANT:
-  Before installing, make sure you have your ProtonVPN credentials ready. You'll need
-  to configure PROTONVPN_PRIVATE_KEY in the exports.sh file.
-  Gluetun provides an HTTP API (not a web UI) for
-  monitoring at port 8000. Use curl or other tools to interact with the API.
+  ⚠️ IMPORTANT:
+  Before installing, make sure you have your ProtonVPN credentials ready. You'll need to configure PROTONVPN_PRIVATE_KEY in the exports.sh file.
+  Gluetun provides an HTTP API (not a web UI) for monitoring at port 8000. Use curl or other tools to interact with the API.
   
   🛠️ SET-UP INSTRUCTIONS
-
+  
   After installing STOP the container and fill in the private key in the exports file!!!!
   
   
   CHECKS:  
   Check your instance with:
+
+  
   sudo docker logs -f martinmeel-gluetun_server_1
   
   Useful Gluetun Control Server Endpoints
