@@ -36,13 +36,12 @@ services:
       - VPN_SERVICE_PROVIDER=protonvpn
       - VPN_TYPE=wireguard
       - WIREGUARD_PRIVATE_KEY=${PROTONVPN_PRIVATE_KEY}
-      - SERVER_COUNTRIES=Netherlands         
+      - SERVER_COUNTRIES=Netherlands
       # Control server
       - HTTPPROXY=on
       - HTTPPROXY_LISTENING_ADDRESS=:8888
       # Timezone
       - TZ=Europe/Amsterdam
-      
       # Health check URL
     healthcheck:
       test: ["CMD-SHELL", "curl -fs http://localhost:8000/v1/publicip/ip > /dev/null || exit 1"]
@@ -50,6 +49,5 @@ services:
       timeout: 10s
       retries: 3
       start_period: 45s
-    
     restart: unless-stopped
     stop_grace_period: 1m
