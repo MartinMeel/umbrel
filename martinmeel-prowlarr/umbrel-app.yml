@@ -20,8 +20,8 @@ repo: https://github.com/Prowlarr/Prowlarr
 support: https://forums.prowlarr.com
 port: 9696
 gallery:
-  - https://i.imgur.com/WlRLLP4.png
-  - https://i.imgur.com/cG92nGK.png
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-prowlarr/1.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-prowlarr/2.jpg
 releaseNotes: >-
   Prowlarr configured to route through Gluetun VPN container
 path: ""
