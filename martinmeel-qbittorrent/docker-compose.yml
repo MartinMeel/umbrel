@@ -24,4 +24,3 @@ services:
       start_period: 60s
     restart: unless-stopped
     stop_grace_period: 1m
-    restart: unless-stopped
