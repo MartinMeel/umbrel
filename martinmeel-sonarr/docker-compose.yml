@@ -11,6 +11,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${UMBREL_ROOT}/home/Downloads/TVSeries:/tv
+      - ${UMBREL_ROOT}/home/Downloads/TVSeriesOLD:/tvold
       - ${UMBREL_ROOT}/home/Downloads/complete:/downloads
     environment:
       - PUID=1000
