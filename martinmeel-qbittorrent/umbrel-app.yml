@@ -28,7 +28,7 @@ gallery:
   - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-qbittorrent/3.jpg
 path: ""
 defaultUsername: "admin"
-defaultPassword: ""
+defaultPassword: "Via the troubleshoot button the password will reveal"
 torOnly: false
 releaseNotes: >-
   This release includes several bug fixes and improvements for better performance and stability.
