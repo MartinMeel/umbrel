@@ -42,8 +42,10 @@ services:
       - HTTPPROXY_LISTENING_ADDRESS=:8888
       - VPN_PORT_FORWARDING=on # Enable port forwarding
       - VPN_PORT_FORWARDING_PROVIDER=protonvpn
-      - VPN_PORT_FORWARDING_UP_COMMAND=/bin/sh -c 'sleep 10 && curl -X POST -d "json={\"listen_port\":$PORTS}" http://127.0.0.1:8080/api/v2/app/setPreferences 2>&1'
+      #- VPN_PORT_FORWARDING_UP_COMMAND=/bin/sh -c 'sleep 10 && curl -X POST -d "json={\"listen_port\":$PORTS}" http://127.0.0.1:8080/api/v2/app/setPreferences 2>&1'
       #- VPN_PORT_FORWARDING_UP_COMMAND=/bin/sh -c 'wget -O- --retry-connrefused --post-data "json={\"listen_port\":{{PORTS}}}" http://127.0.0.1:8080/api/v2/app/setPreferences 2>&1'
+      # AUTO-UPDATE QBITTORRENT PORT - ADD THIS LINE:
+      - VPN_PORT_FORWARDING_UP_COMMAND=/bin/sh -c 'sleep 30 && wget -qO- --retry-connrefused --waitretry=5 --tries=10 --post-data "json={\"listen_port\":$$PORTS}" http://127.0.0.1:8080/api/v2/app/setPreferences'
       # Timezone
       - TZ=Europe/Amsterdam
     # Health check URL
