@@ -9,10 +9,19 @@ services:
     network_mode: "container:martinmeel-gluetun_server_1"
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
-      - ${APP_DATA_DIR}/data/downloads:/downloads
+      - ${UMBREL_ROOT}/home/Downloads/complete:/downloads
+      - ${UMBREL_ROOT}/home/Downloads/incomplete:/incomplete
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Amsterdam
       - WEBUI_PORT=8090
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8090/ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
+    stop_grace_period: 1m
     restart: unless-stopped
