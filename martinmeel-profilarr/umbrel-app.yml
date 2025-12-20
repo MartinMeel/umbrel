@@ -14,8 +14,6 @@ description: >-
   
 developer: Prowlarr Team
 website: https://dictionarry.dev/
-dependencies:
-  - martinmeel-gluetun
 repo: https://dictionarry.dev/
 support: https://dictionarry.dev/
 port: 9696
