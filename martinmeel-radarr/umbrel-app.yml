@@ -26,6 +26,9 @@ gallery:
   - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-radarr/3.jpg
 releaseNotes: >-
   Radarr configured to route through Gluetun VPN container
+path: ""
+defaultUsername: ""
+defaultPassword: ""
 submitter: Martin Meel
 submission: https://github.com/getumbrel/umbrel-apps
 #torOnly: false
