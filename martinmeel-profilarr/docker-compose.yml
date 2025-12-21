@@ -2,7 +2,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: martinmeel-gluetun_server_1
-      APP_PORT: 1818
+      APP_PORT: 6868
       #PROXY_AUTH_ADD: false
   server:
     image: santiagosayshey/profilarr:latest
