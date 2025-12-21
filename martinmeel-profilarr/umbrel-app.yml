@@ -21,9 +21,6 @@ gallery:
   - https://github.com/Dictionarry-Hub/profilarr/blob/main/.github/images/preview.png
 releaseNotes: >-
   None
-#path: ""
-defaultUsername: ""
-defaultPassword: ""
 submitter: Martin Meel
 submission: https://github.com/getumbrel/umbrel-apps
 torOnly: false
