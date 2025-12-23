@@ -45,7 +45,7 @@ services:
       - VPN_PORT_FORWARDING_PROVIDER=protonvpn
       # Timezone
       - TZ=Europe/Amsterdam
-          - HEALTH_TARGET_ADDRESSES=cloudflare.com:443,github.com:443
+      - HEALTH_TARGET_ADDRESSES=cloudflare.com:443,github.com:443
       - HEALTH_SERVER_ADDRESS=127.0.0.1:9999
       - HEALTH_RESTART_VPN=on
       - DNS_SERVER=on
