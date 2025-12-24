@@ -13,7 +13,8 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-    env_file:
-      - .env
+    # Your timezone
+      - TZ=Europe/Amsterdam
     restart: unless-stopped
     stop_grace_period: 1m
+
