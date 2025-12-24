@@ -3,7 +3,7 @@ id: martinmeel-huntarr
 name: Huntarr
 version: "8.2.10"
 tagline: Huntarr - Find Missing & Upgrade Media Items
-icon: https://github.com/plexguide/Huntarr.io/blob/main/frontend/static/logo/128.png
+icon: https://github.com/plexguide/Huntarr.io/blob/main/frontend/static/logo/128.png?raw=true
 category: multimedia
 description: >-
 
