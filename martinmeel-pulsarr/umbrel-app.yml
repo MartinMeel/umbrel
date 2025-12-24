@@ -28,4 +28,4 @@ defaultUsername: ""
 defaultPassword: ""
 submitter: Martin Meel
 submission: https://github.com/getumbrel/umbrel-apps
-#torOnly: false
+torOnly: false
