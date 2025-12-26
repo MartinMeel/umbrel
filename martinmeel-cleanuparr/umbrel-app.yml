@@ -25,7 +25,7 @@ description: >-
     Notify on strike or download removal.
     Ignore certain torrent hashes, categories, tags or trackers from being processed by Cleanuparr.
 
-developer: leanuparr
+developer: Cleanuparr
 website: https://github.com/Cleanuparr/Cleanuparr
 dependencies: []
   #- martinmeel-gluetun
@@ -39,7 +39,7 @@ gallery:
   - https://cleanuparr.github.io/Cleanuparr/img/screenshots/stall_rules.png
   - https://cleanuparr.github.io/Cleanuparr/img/screenshots/download_clients.png
 releaseNotes: >-
-  DICleanuparr configured to route through Gluetun VPN container
+  Cleanuparr configured to route through Gluetun VPN container
 path: ""
 defaultUsername: ""
 defaultPassword: ""
