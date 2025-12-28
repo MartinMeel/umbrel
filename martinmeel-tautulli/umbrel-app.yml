@@ -1,0 +1,46 @@
+manifestVersion: 1
+id: martinmeel-tautulli
+name: 4.5 Tautulli
+tagline: Monitor your Plex Media Server.
+icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/overseerr.png
+category: multimedia
+version: "2.7.3"
+port: 8181
+description: >-
+  Tautulli is a 3rd party application that you can run alongside your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. The only thing missing is "why they watched it", but who am I to question your 42 plays of Frozen. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.
+
+  Features
+  - Responsive web design viewable on desktop, tablet and mobile web browsers.
+  - Themed to complement Plex/Web.
+  - Easy configuration setup (no separate web server required).
+  - Monitor current Plex Media Server activity.
+  - Fully customizable notifications for stream activity and recently added media.
+  - Top statistics on home page with configurable duration and measurement metric.
+  - Global watching history with search/filtering & dynamic column sorting.
+  - Full user list with general information and comparison stats.
+  - Individual user information including devices IP addresses.
+  - Complete library statistics and media file information.
+  - Rich analytics presented using Highcharts graphing.
+  - Beautiful content information pages.
+  - Full sync list data on all users syncing items from your library.
+  - And many more!!
+
+developer: Tautulli
+website: https://tautulli.com/
+dependencies: [] #If you enable this Tautulli only install if Gluetun is installed. Also if you want to uninstall, Gluetun has to be uninstalled first!!!
+  #- martinmeel-gluetun
+repo: https://github.com/Tautulli/Tautulli
+support: https://tautulli.com/#support
+gallery:
+  - https://tautulli.com/images/screenshots/libraries-thumb.png?v=2
+  - https://tautulli.com/images/screenshots/library-thumb.png?v=2
+  - https://tautulli.com/images/screenshots/graphs-thumb.png?v=2
+  - https://tautulli.com/images/screenshots/notifications-thumb.png?v=2
+releaseNotes: >-
+  Tautulli configured to route through Gluetun VPN container
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: Martin Meel
+submission: https://github.com/MartinMeel/umbrel-apps
+torOnly: false
