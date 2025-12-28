@@ -2,7 +2,7 @@ manifestVersion: 1
 id: martinmeel-prowlarr
 name: 4.1 Prowlarr
 tagline: Indexer manager for Sonarr and Radarr
-icon: - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-prowlarr/icon.svg
+icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-prowlarr/icon.svg
 category: multimedia
 version: "1.0.0"
 port: 9696
