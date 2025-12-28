@@ -15,6 +15,8 @@ description: >-
   
   During initial set-up, you will need to input your Umbrel device's IP address to connect to your Plex Media Server.
   You can find your device's IP address by visiting your router's admin dashboard or by using an IP scanning tool like Angry IP Scanner.
+
+    ⚠️ This version routes all traffic through Gluetun VPN for privacy and security.
 developer: Tautulli
 website: https://tautulli.com/
 dependencies: [] #If you enable this Tautulli only install if Gluetun is installed. Also if you want to uninstall, Gluetun has to be uninstalled first!!!
@@ -23,8 +25,8 @@ repo: https://github.com/Tautulli/Tautulli
 support: https://tautulli.com/#support
 gallery:
   - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/1.jpg
-  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/1.jpg
-  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/1.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/2.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/3.jpg
 releaseNotes: >-
   Tautulli configured to route through Gluetun VPN container
 path: ""
