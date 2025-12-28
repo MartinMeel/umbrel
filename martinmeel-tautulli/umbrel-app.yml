@@ -2,7 +2,7 @@ manifestVersion: 1
 id: martinmeel-tautulli
 name: 4.5 Tautulli
 tagline: Monitor your Plex Media Server.
-icon: https://tautulli.com/images/93124B55.png
+icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/icon.svg
 category: multimedia
 version: "2.7.3"
 port: 8181
@@ -32,10 +32,9 @@ dependencies: [] #If you enable this Tautulli only install if Gluetun is install
 repo: https://github.com/Tautulli/Tautulli
 support: https://tautulli.com/#support
 gallery:
-  - https://tautulli.com/images/screenshots/libraries-thumb.png?v=2
-  - https://tautulli.com/images/screenshots/library-thumb.png?v=2
-  - https://tautulli.com/images/screenshots/graphs-thumb.png?v=2
-  - https://tautulli.com/images/screenshots/notifications-thumb.png?v=2
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/1.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/1.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/1.jpg
 releaseNotes: >-
   Tautulli configured to route through Gluetun VPN container
 path: ""
