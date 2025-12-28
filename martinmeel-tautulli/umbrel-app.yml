@@ -4,28 +4,17 @@ name: 4.5 Tautulli
 tagline: Monitor your Plex Media Server.
 icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-tautulli/icon.svg
 category: multimedia
-version: "2.7.3"
+version: "2.16.0"
 port: 8181
 description: >-
-  Tautulli is a 3rd party application that you can run alongside your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. The only thing missing is "why they watched it", but who am I to question your 42 plays of Frozen. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.
+  Tautulli is a 3rd party application that you can run alongside your Plex Media Server to monitor activity and track various statistics.
+  Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched.
+  The only thing missing is "why they watched it", but who am I to question your 42 plays of Frozen.
 
-  Features
-
-  - Responsive web design viewable on desktop, tablet and mobile web browsers.
-  - Themed to complement Plex/Web.
-  - Easy configuration setup (no separate web server required).
-  - Monitor current Plex Media Server activity.
-  - Fully customizable notifications for stream activity and recently added media.
-  - Top statistics on home page with configurable duration and measurement metric.
-  - Global watching history with search/filtering & dynamic column sorting.
-  - Full user list with general information and comparison stats.
-  - Individual user information including devices IP addresses.
-  - Complete library statistics and media file information.
-  - Rich analytics presented using Highcharts graphing.
-  - Beautiful content information pages.
-  - Full sync list data on all users syncing items from your library.
-  - And many more!!
-
+    🛠️  SET-UP INSTRUCTIONS
+  
+  During initial set-up, you will need to input your Umbrel device's IP address to connect to your Plex Media Server.
+  You can find your device's IP address by visiting your router's admin dashboard or by using an IP scanning tool like Angry IP Scanner.
 developer: Tautulli
 website: https://tautulli.com/
 dependencies: [] #If you enable this Tautulli only install if Gluetun is installed. Also if you want to uninstall, Gluetun has to be uninstalled first!!!
