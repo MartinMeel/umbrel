@@ -38,7 +38,7 @@ releaseNotes: >-
   
   Full release notes for Radarr are available at https://github.com/Radarr/Radarr/releases
 path: ""
-defaultUsername: ""
+defaultUsername: "admin"
 defaultPassword: ""
 submitter: martinmeel
 submission: https://github.com/MartinMeel/umbrel-apps
