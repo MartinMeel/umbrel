@@ -1,0 +1,37 @@
+services:
+  spotweb:
+    image: jgeusebroek/spotweb
+    restart: unless-stopped
+    environment:
+     - PUID=1000
+     - GUID=1000
+     - TZ=Europe/Amsterdam
+     - SPOTWEB_DB_TYPE=pdo_mysql
+     - SPOTWEB_DB_HOST=spotweb_db
+     - SPOTWEB_DB_PORT=3306
+     - SPOTWEB_DB_NAME=spotweb
+     - SPOTWEB_DB_USER=spotweb
+     - SPOTWEB_DB_PASS=${SPOTWEB_DB_PASSWORD}
+     - "SPOTWEB_CRON_RETRIEVE=* */2 * * *"
+    depends_on:
+     - spotweb_db
+    ports:
+     - 81:80
+    volumes:
+     - /home/umbrel/umbrel/app-data/martinmeel-spotweb/data/spotweb:/config
+
+  spotweb_db:
+    image: linuxserver/mariadb
+    restart: unless-stopped
+    environment:
+     - PUID=1000
+     - PGID=1000
+     - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+     - TZ=Europe/Amsterdam
+     - MYSQL_DATABASE=spotweb
+     - MYSQL_USER=spotweb
+     - MYSQL_PASSWORD=${SPOTWEB_DB_PASSWORD}
+    volumes:
+     - /home/umbrel/umbrel/app-data/martinmeel-spotweb/data/mariadb:/config
+    ports:
+     - 3306:3306

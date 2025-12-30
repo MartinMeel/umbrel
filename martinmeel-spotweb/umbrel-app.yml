@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: martinmeel-spotweb
+name: Spotweb
+tagline: Spotweb is a decentralized usenet community based on the Spotnet protocol.
+icon: https://github.com/spotweb/spotweb/blob/develop/images/spotnet.gif?raw=true
+category: multimedia
+version: "1.0"
+port: 81
+description: >-
+  
+  Spotweb is one of the most-featured Spotnet clients currently available.
+  
+developer: jgeusebroek
+website: https://github.com/jgeusebroek/docker-spotweb
+submitter: martinmeel
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/jgeusebroek/docker-spotweb
+support: https://github.com/jgeusebroek/docker-spotweb/issues
+gallery:
+  - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-homepage/1.jpg
+  - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-homepage/1.jpg
+  - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-homepage/1.jpg
+releaseNotes: >-
+  
+  This version focuses on improving stability and refinement across several parts of the application. 
+  
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
