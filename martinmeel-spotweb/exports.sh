@@ -5,9 +5,9 @@ echo "Root Password: $MYSQL_ROOT_PASSWORD"
 
 # Remove unwanted file after installation
 # This runs during the installation process
-if [ -f "/home/umbrel/umbrel/app-data/martinmeel-spotweb/spotwebdbsettings.inc.php" ]; then
+if [ -f "/home/umbrel/umbrel/app-data/martinmeel-spotweb/dbsettings.inc.php" ]; then
     echo "Removing unwanted file..."
-    rm -f "/home/umbrel/umbrel/app-data/martinmeel-spotweb/spotwebdbsettings.inc.php"
+    rm -f "/home/umbrel/umbrel/app-data/martinmeel-spotweb/dbsettings.inc.php"
 fi
 
 # Or if the file is in the app's data directory:
