@@ -1,0 +1,6 @@
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  #environment:
+  # PMA_HOST: your-mariadb-container
+  ports:
+    - "8003:80"
