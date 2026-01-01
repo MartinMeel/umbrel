@@ -19,13 +19,13 @@ description: >-
 
   - After that, ssh into your umbrel via your favorite terminal program (like putty) and run the following command:
 
-  - sudo rm -rf /home/umbrel/umbre/app-data/spotweb/dbsettings.inc.php
+    sudo rm -rf /home/umbrel/umbre/app-data/spotweb/dbsettings.inc.php
+    
   - Check if it is removed. If yes then proceed with the next steps,
   - After the neccesary steps above access the Spotweb setup via your browser at 
     http://umbrel.local:81/install.php
-    
-  - Answer the questions and the last step is to create a new dbsettings.inc.php file.
 
+  - Answer the questions and the last step is to create a new dbsettings.inc.php file.
 
   - Congratutaions. You have successfully installed Spotweb on your Umbrel node.
 
