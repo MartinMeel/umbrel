@@ -1,4 +1,5 @@
 services:
+  # No Need to use the umbrel proxy app because gluetun will take over this functionality. Sort of ;-)
   #app_proxy:
   #  environment:
       #PROXY_AUTH_ADD: false
