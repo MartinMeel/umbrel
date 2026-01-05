@@ -18,18 +18,26 @@ services:
       - 8888:8888
       # Gluetun control server mostly used with openvpn!
       - 8000:8000
-      # Expose ports for other containers to use
+      # There is no need to add the portnumbers of the applications that you need to work via gluetun.
+      # Gluetun will handle this functionality.
       # Sonarr
-      # removed to test port conflict - 8989:8989
+      # removed else port conflict - 8989:8989
       # Prowlarr
-      # removed to test port conflict - 9696:9696
+      # removed else port conflict - 9696:9696
       # SABnzbd
-      # removed to test port conflict - 8080:8080
+      # removed else port conflict - 8080:8080
       # qBittorrent
-      # removed to test port conflict - 8090:8090
-      # Wirks without errors on qbittorrent side!!! So port needs to be removed because "The port will still be accessible within the Docker network, which is what app_proxy needs."
+      # removed else port conflict - 8090:8090
       # Radarr
-      # removed to test port conflict - 7878:7878
+      # removed else port conflict - 7878:7878
+      # Huntarr
+      # removed else port conflict - 9705:9705
+      # Overseerr
+      # removed else port conflict - 5055:5055
+      # Tautulli
+      # removed else port conflict - 8181:8181
+      # Profilarr
+      # removed else port conflict - 6868:6868
     volumes:
       - ${APP_DATA_DIR}/data:/gluetun
     environment:
