@@ -58,7 +58,7 @@ services:
       # DNS over TLS
       #- DOT=on
       #- DOT_PROVIDERS=cloudflare,google
-      # Ads and malware blocking
+      # Ads and malware blocking (not needed if using protonvpn with private key for ade and malware blocking)
       #- BLOCK_ADS=on
       #- BLOCK_MALWARE=on
       # Enable the firewall
