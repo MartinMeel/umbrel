@@ -52,6 +52,19 @@ services:
       # Enable port forwarding. Note! Make sure you use the private key which covers the portforwarding option.
       - VPN_PORT_FORWARDING=on
       - VPN_PORT_FORWARDING_PROVIDER=protonvpn
+      # Script that automatically updates portforwarding on qBittorrent.
+      - VPN_PORT_FORWARDING_UP_COMMAND=/bin/sh -c 'wget -O- --retry-connrefused --post-data "json={\"listen_port\":{{PORTS}},\"random_port\":false,\"upnp\":false}" http://127.0.0.1:8090/api/v2/app/setPreferences 2>&1'
+      - VPN_PORT_FORWARDING_DOWN_COMMAND=/bin/sh -c 'wget -O- --retry-connrefused --post-data "json={\"listen_port\":0}" http://127.0.0.1:8090/api/v2/app/setPreferences 2>&1'
+      # DNS over TLS
+      #- DOT=on
+      #- DOT_PROVIDERS=cloudflare,google
+      # Ads and malware blocking
+      #- BLOCK_ADS=on
+      #- BLOCK_MALWARE=on
+      # Enable the firewall
+      #- FIREWALL=on
+      # Enable the kill switch
+      #- KILLSWITCH=on 
       # Timezone
       - TZ=Europe/Amsterdam
       # Healthchecks
