@@ -16,9 +16,9 @@ services:
     - ./CrushFTP11/:/app/CrushFTP11
     entrypoint: ["/bin/sh", "-c", "/entrypoint.sh"]
     user: "${UID}:${GID}"
-  crushftp:
+  server:
     image: 'crushftp/crushftp11:latest'
-    container_name: crushftp
+  #  container_name: crushftp
   #  ports:
   #    - '8081:8080'
   #    - '9091:9090'
