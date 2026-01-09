@@ -15,7 +15,7 @@ services:
     volumes:
     - ${APP_DATA_DIR}/data/config/:/app/CrushFTP11
     entrypoint: ["/bin/sh", "-c", "/entrypoint.sh"]
-    user: "${UID}:${GID}"
+    user: "1000:1000"  # "${UID}:${GID}"
   server: #needs to be named "server" else it won't work with the app_proxy!
     image: 'crushftp/crushftp11:latest'
   #  container_name: crushftp
