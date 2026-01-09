@@ -1,0 +1,36 @@
+manifestVersion: 1
+id: martinmeel-crushftp
+category: file-management
+name: 10. Crushftp
+version: "11"
+tagline: CrushFTP is an extremely powerful ftp server
+icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-sonarr/icon.svg
+description: >-
+  
+  CrushFTP is filled full of features. Features you might not use right away, 
+  but eventually as your business grows you'll wonder if it can handle a new task. 
+  Usually, the feature is already there, just waiting for you to explore and use it!
+  First time users will be up and running in no time, and power users 
+  won't be disappointed with a lack of options, controls, or functionality.
+
+  login = crushadmin
+  password = password can be found in the passfile file in the app data folder after first run.
+
+developer: CrushFTP, LLC
+website: https://crushftp.com
+dependencies: [] 
+repo: https://github.com/Sonarr/Sonarr
+support: https://www.crushftp.com/support.html
+port: 8989
+gallery:
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-sonarr/1.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-sonarr/2.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-sonarr/3.jpg
+releaseNotes: >-
+  1st release for umbrel
+path: ""
+defaultUsername: "crushadmin"
+defaultPassword: ""
+submitter: martinmeel
+submission: https://github.com/getumbrel/umbrel-apps
+torOnly: false
