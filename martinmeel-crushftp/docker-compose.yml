@@ -2,7 +2,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: martinmeel-crushftp_server_1
-      APP_PORT: 9091
+      APP_PORT: 8081
       # Set false if another app from outside your umbrell wants to connect without login!
       PROXY_AUTH_ADD: 'false'
 
