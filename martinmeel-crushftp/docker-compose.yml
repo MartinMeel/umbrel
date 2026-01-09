@@ -7,9 +7,9 @@ services:
       PROXY_AUTH_ADD: 'false'
 
 
-  server:
+  crushftp-init:
     image: 'crushftp/crushftp11:latest-dev'
-    container_name: crushftp-init
+  #  container_name: crushftp-init
     environment:
       - INIT=true
     volumes:
