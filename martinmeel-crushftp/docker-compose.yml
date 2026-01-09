@@ -1,7 +1,7 @@
 services:
   app_proxy:
-    depends_on:
-    - server
+    #depends_on:
+    #- server
     environment:
       APP_HOST: martinmeel-crushftp_server_1
       APP_PORT: 9090
@@ -29,9 +29,9 @@ services:
     working_dir: "/app/CrushFTP11"
     entrypoint: ["java", "-Ddir=/app/CrushFTP11", "-Xmx512M", "-jar", "/app/CrushFTP11/plugins/lib/CrushFTPJarProxy.jar", "-ad", "crushadmin", "PASSFILE"]
     user: "1000:1000" #  "${UID}:${GID}"
-    depends_on:
-      crushftp-init:
-        condition: service_completed_successfully
+  # depends_on:
+  #    crushftp-init:
+  #      condition: service_completed_successfully
 #volumes:
 #  local_folder:
 #    driver: local
