@@ -12,7 +12,7 @@ services:
     ports:
     #  - '18080:8080' # Web Interface
     #  - '19090:9090' # Admin Interface
-      - '18443:443' # FTPS
+      - '18443:443' # HTTPS
       - '12121:2121' # FTP
       - '12222:2222' # SFTP
     volumes:
