@@ -8,15 +8,14 @@ tagline: CrushFTP is an extremely powerful ftp server
 icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-crushftp/icon.png
 description: >-
   
-  CrushFTP is filled full of features. Features you might not use right away, 
-  but eventually as your business grows you'll wonder if it can handle a new task. 
-  Usually, the feature is already there, just waiting for you to explore and use it!
-  First time users will be up and running in no time, and power users 
+  CrushFTP is filled full of features. Features you might not use right away, but eventually as your business grows you'll wonder if it can handle a new task. 
+  Usually, the feature is already there, just waiting for you to explore and use it! First time users will be up and running in no time, and power users 
   won't be disappointed with a lack of options, controls, or functionality.
   
+  
   login = crushadmin
-  
-  
+
+
   password = password can be found in the passfile file in the app data folder after first run.
   
   
