@@ -10,12 +10,10 @@ services:
     image: 'crushftp/crushftp11:latest-dev'
     environment:
       - INIT=true
-      - PUID=1000
-      - PGID=1000
     volumes:
     - ${APP_DATA_DIR}/data/config/:/app/CrushFTP11
     entrypoint: ["/bin/sh", "-c", "/entrypoint.sh"]
-   # user: "${UID}:${GID}"
+    user: "${UID}:${GID}"
   server: #needs to be named "server" else it won't work with the app_proxy!
     image: 'crushftp/crushftp11:latest'
     ports:
