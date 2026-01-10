@@ -10,8 +10,8 @@ services:
   crushftp:
     image: 'crushftp/crushftp11:latest'
     ports:
-      - '18080:8080' # Web Interface
-      - '19090:9090' # Admin Interface
+    #  - '18080:8080' # Web Interface
+    #  - '19090:9090' # Admin Interface
       - '18443:443' # FTPS
       - '12121:2121' # FTP
       - '12222:2222' # SFTP
