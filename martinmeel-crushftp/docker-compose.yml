@@ -10,10 +10,12 @@ services:
     image: 'crushftp/crushftp11:latest-dev'
     environment:
       - INIT=true
+      - PUID=1000
+      - PGID=1000
     volumes:
     - ${APP_DATA_DIR}/data/config/:/app/CrushFTP11
     entrypoint: ["/bin/sh", "-c", "/entrypoint.sh"]
-    user: "${UID}:${GID}"
+   # user: "${UID}:${GID}"
   server: #needs to be named "server" else it won't work with the app_proxy!
     image: 'crushftp/crushftp11:latest'
     ports:
@@ -26,7 +28,10 @@ services:
     - ${APP_DATA_DIR}/data/config/:/app/CrushFTP11
     working_dir: "/app/CrushFTP11"
     entrypoint: ["java", "-Ddir=/app/CrushFTP11", "-Xmx512M", "-jar", "/app/CrushFTP11/plugins/lib/CrushFTPJarProxy.jar", "-ad", "crushadmin", "PASSFILE"]
-    user: "${UID}:${GID}"
+   # user: "${UID}:${GID}"
+    environment:
+      - PUID=1000
+      - PGID=1000
 # Uncomment to use a local folder as data storage (for development purposes)
 #volumes:
 #  local_folder:
