@@ -20,6 +20,7 @@ description: >-
   
   
   🛠️ SETUP INSTRUCTIONS !!!! IMPORTANT !!!!
+  
   1. After the app has installed just wait one or two minutes before continuing to step 2.
   2. ssh into your Umbrel device using terminal or putty or whatever you like.  
   3. execute this command: sudo chown -R $(id -u):$(id -u) /home/umbrel/umbrel/app-data/martinmeel-crushftp/CrushFTP11
