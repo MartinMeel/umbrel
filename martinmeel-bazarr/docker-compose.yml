@@ -1,0 +1,26 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: martinmeel-gluetun_server_1
+      APP_PORT: 6767
+      # Use this if another app outside your umbrel device wants to connect via an API call
+      PROXY_AUTH_WHITELIST: /api/*
+      # Set false if another app from outside your umbrell wants to connect without login!
+      PROXY_AUTH_ADD: 'false'
+
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    # Use Gluetun's network stack - all traffic goes through VPN
+    network_mode: "container:martinmeel-gluetun_server_1"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${UMBREL_ROOT}/home/Downloads/Films:/movies
+      - ${UMBREL_ROOT}/home/Downloads/TVSeries:/tv
+    #ports:
+    #  - 6767:6767
+    restart: unless-stopped
+    stop_grace_period: 1m

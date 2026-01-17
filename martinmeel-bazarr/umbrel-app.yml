@@ -1,0 +1,35 @@
+manifestVersion: 1
+id: martinmeel-bazarr
+name: 2.3 Radarr
+tagline: Download subtitles for Sonarr and Radarr
+icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-radarr/icon.svg
+category: multimedia
+version: "1.5.4"
+port: 7878
+description: >-
+  Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+  
+  🛠️ SETUP INSTRUCTIONS
+  TBD
+
+  ⚠️ This version routes all traffic through Gluetun VPN for privacy and security.
+
+developer: Nazarr Team
+website: https://www.bazarr.media
+dependencies: [] #If you enable this, Bazarr will only install if Gluetun is installed. Also if you want to uninstall, Gluetun has to be uninstalled first!!!
+  #- martinmeel-gluetun
+repo: https://github.com/morpheus65535/bazarr
+support: https://www.bazarr.media/#support
+gallery:
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-bazarr/1.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-bazarr/2.jpg
+  - https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-bazarr/3.jpg
+releaseNotes: >-
+  This update includes various improvements and bug fixes:
+  Full release notes for Bazarr are available at https://github.com/morpheus65535/bazarr/releases/tag/v1.5.4
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: martinmeel
+submission: https://github.com/getumbrel/umbrel-apps
+torOnly: false
