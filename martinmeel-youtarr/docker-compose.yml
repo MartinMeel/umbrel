@@ -89,7 +89,7 @@ services:
     #ports:
     #  - "3087:3011"
     volumes:
-      - ${UMBREL_ROOT}/home/Downloads:/usr/src/app/data
+      - ${UMBREL_ROOT}/home/Downloads/Youtube:/usr/src/app/data
       - ${APP_DATA_DIR}/server/images:/app/server/images
       - ${APP_DATA_DIR}/data/config:/app/config
       - ${APP_DATA_DIR}/data/jobs:/app/jobs
