@@ -2,7 +2,7 @@ manifestVersion: 1
 id: martinmeel-bazarr
 name: 2.3 Bazarr
 tagline: Download subtitles for Sonarr and Radarr
-icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-radarr/icon.svg
+icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-bazarr/icon.svg
 category: multimedia
 version: "1.5.4"
 port: 6767
