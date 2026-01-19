@@ -18,10 +18,11 @@ services:
       - TZ=Europe/Amsterdam
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
-      - ${UMBREL_ROOT}/home/Downloads/Films:/movies
-      - ${UMBREL_ROOT}/home/Downloads/Films2:/movies1
-      - ${UMBREL_ROOT}/home/Downloads/TVSeries:/tv
-      - ${UMBREL_ROOT}/home/Downloads/TVSeriesOld:/tvold
+      # Below is your media directories, adjust as needed
+      - ${MOVIES1}:/movies
+      - ${MOVIES2}:/movies1
+      - ${SERIES1}:/tv
+      - ${SERIES2}:/tvold
     #ports:
     #  - 6767:6767
     restart: unless-stopped
