@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: martinmeel-gluetun
-name: 1.0 Gluetun VPN
+name: 1.1 Gluetun VPN Extra
 tagline: Lightweight VPN client with support for multiple providers
 icon: https://raw.githubusercontent.com/MartinMeel/umbrel-app-gallery/main/martinmeel-gluetun/gluetun.svg
 category: networking
